@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz</title>
+
+    <style>
+div{
+    text-align: center;
+    margin-top: 5%;
+    
+}
+
+label {
+
+ 
+
+    font-size: 25px;
+    font-family:Helvetica;
+}
+
+
+
+.dwa {
+
+    font-size: 15px;
+
+margin: 3px;
+
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family:Helvetica;
+
+}
+
+
+
+
+.button-4 {
+  appearance: none;
+  background-color: #FAFBFC;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292E;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 6px 16px;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
+
+.button-4:hover {
+  background-color: #F3F4F6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+.button-4:disabled {
+  background-color: #FAFBFC;
+  border-color: rgba(27, 31, 35, 0.15);
+  color: #959DA5;
+  cursor: default;
+}
+
+.button-4:active {
+  background-color: #EDEFF2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
+
+.button-4:focus {
+  outline: 1px transparent;
+}
+
+.button-4:before {
+  display: none;
+}
+
+.button-4:-webkit-details-marker {
+  display: none;
+}
+
+.box {
+  height: 825px;
+  width: 300px;
+  position: relative;
+}
+
+.box__line {
+  position: absolute;
+  background: black;
+}
+.box__line--top, .box__line--bottom {
+  height: 8px;
+  width: 100%;
+}
+.box__line--top::before, .box__line--top::after, .box__line--bottom::before, .box__line--bottom::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: black;
+}
+.box__line--top {
+  top: -8px;
+}
+.box__line--top::before {
+  left: 0;
+  bottom: -8px;
+}
+.box__line--top::after {
+  right: 0;
+  bottom: -8px;
+}
+.box__line--bottom {
+  bottom: -8px;
+}
+.box__line--bottom::before {
+  left: 0;
+  top: -8px;
+}
+.box__line--bottom::after {
+  right: 0;
+  top: -8px;
+}
+.box__line--left, .box__line--right {
+  width: 8px;
+  height: 100%;
+}
+.box__line--left {
+  left: -8px;
+}
+.box__line--right {
+  right: -8px;
+}
+
+
+        </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box__line box__line--top"></div>
+        <div class="box__line box__line--right"></div>
+        <div class="box__line box__line--bottom"></div>
+        <div class="box__line box__line--left"></div>
+<div>
+
+<form action="form.php" method="post" id="form">
+<br><br>
+<label>Imię</label>
+<br><br>
+<input type="text" id="imie" name="imie">
+<br><br>
+<label>Nazwisko</label>
+<br><br>
+<input type="text" id="nazwisko" name="nazwisko">
+<br><br>
+<label>Data Urodzenia</label>
+<br><br>
+<input type="date" id="data" name="data">
+<br><br>
+<label>Adres email</label>
+<br><br>
+<input type="text" id="email" name="email">
+<br><br>
+<label>Telefon kontaktowy</label>
+<br><br>
+<input type="text" id="telefon" name="telefon">
+<br><br>
+<label>Województwo</label>
+<br><br>
+<select id="wojewodztwo" name="wojewodztwo">
+<option value="dolnośląskie">Dolnośląskie</option>
+<option value="kujawsko-pomorskie">Kujawsko-Pomorskie</option>
+<option value="lubelskie">Lubelskie</option>
+<option value="lubuskie">Lubuskie</option>
+<option value="łódzkie">Łódzkie</option>
+<option value="małopolskie">Małopolskie</option>
+<option value="mazowieckie">Mazowieckie</option>
+<option value="opolskie">Opolskie</option>
+<option value="podkarpackie">Podkarpackie</option>
+<option value="podlaskie">Podlaskie</option>
+<option value="pomorskie">Pomorskie</option>
+<option value="śląskie">Śląskie</option>
+<option value="świętokrzyskie">Świętokrzyskie</option>
+<option value="warmińsko-mazurskie">Warmińsko-Mazurskie</option>
+<option value="wielkopolskie">Wielkopolskie</option>
+<option value="zachodniopomorskie">Zachodniopomorskie</option>
+    </select>
+    <br><br>
+    <label>Płeć</label>
+    <br><br>
+<div class="dwa"> <input type="radio" id="plec" name="plec" value="mezczyzna">  Mężczyzna </div>
+<div class="dwa"> <input type="radio" id="plec1" name="plec" value="kobieta"> Kobieta </div>
+<br><br>
+<label>Zgoda na newsleter</label>
+<br><br>
+<input type="checkbox" id="zgoda" name="zgoda">
+<br><br>
+<input class="button-4" role="button" type="submit" name="submit" value="Submit">
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</form>
+</div>
+</div>
+
+<script>
+  $(document).ready(function(){
+    $("#form").validate({
+      rules: {
+        imie: {
+          required: true
+        },
+        nazwisko: {
+          required: true
+        },
+        data: {
+          required: true,
+          date: true
+        },
+        email: {
+          required: true,
+          email: true
+        },
+        telefon: {
+          required: true,
+        digits: true,
+        minlength: 9,
+        maxlength: 9
+        },
+        wojewodztwo: {
+          required: true
+        },
+        plec: {
+          required: true
+        }
+      },
+      messages: {
+        imie: "Proszę podać imię",
+        nazwisko: "Proszę podać nazwisko",
+        data: {
+          required: "Proszę podać datę urodzenia",
+          date: "Proszę podać poprawną datę"
+        },
+        email: {
+          required: "Proszę podać adres email",
+          email: "Proszę podać poprawny adres email"
+        },
+        telefon: {
+          required: "Proszę podać numer telefonu",
+          digits: "Proszę podać tylko cyfry",
+          minlength: "Numer telefonu musi zawierać 9 cyfr",
+        maxlength: "Numer telefonu musi zawierać 9 cyfr"
+   
+        },        
+        plec: "Proszę wybrać płeć"
+      },
+        errorElement: "div",
+        errorPlacement: function(error, element) {
+          error.addClass("error-message");
+          error.insertAfter(element);
+        },
+      });
+    });
+    </script>
+</body>
+</html>
